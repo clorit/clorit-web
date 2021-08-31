@@ -1,0 +1,31 @@
+.Footer {
+    background: #000000;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    figure {
+        text-align: center;
+        figcaption {
+            color: white;
+        }
+    }
+    .icon-group {
+        display:flex;
+    }
+    .contact {
+        font-family: 'Zilla Slab';
+        color: white;
+    }
+}
+
+
+img {
+    background: #000000;
+}
+
+@font-face {
+    font-family: 'Zilla Slab';
+    src: url(../asset/font/ZillaSlab.ttf);
+}
