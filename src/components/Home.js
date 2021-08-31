@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Header from "./Header";
+import HeaderTemplate from "./HeaderTemplate";
 import Footer from "./Footer";
 
 const HomeStyle = styled.div``;
@@ -8,7 +8,7 @@ const HomeStyle = styled.div``;
 const Home = () => {
   return (
     <>
-      <Header></Header>
+      <HeaderTemplate></HeaderTemplate>
       <Footer></Footer>
       <div></div>
     </>

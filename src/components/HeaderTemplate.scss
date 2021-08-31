@@ -1,0 +1,57 @@
+.HeaderTemplate {
+  background: #000000;
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  flex-direction: column;
+  .Top {
+    //background: #ffffff;
+    margin-top: 0.25rem;
+    margin-left: auto;
+    display: flex;
+    .Item {
+      margin-left: 3rem;
+      margin-right: 1rem;
+      color: #ffffff;
+    }
+  }
+
+  .Title {
+    font-family: HSBomBaram 2;
+    font-size: 48px;
+    line-height: 48px;
+    padding-bottom: 1rem;
+    letter-spacing: 0.15em;
+
+    color: #e05344;
+  }
+  .Search {
+    display: flex;
+    //border: 1px solid #e5e5e5;
+    input {
+      width: 526px;
+      height: 30px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+    }
+    button {
+      cursor: pointer;
+      background: #868e96;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  .Bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .Item {
+      font-family: NanumBarunGothic;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      color: #ffffff;
+    }
+  }
+}
