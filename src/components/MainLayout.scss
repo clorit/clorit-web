@@ -1,0 +1,27 @@
+.MainLayout {
+  min-height: 1080px;
+  background: #000000;
+  .Top {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    .Item {
+      font-family: Roboto;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      color: #626060;
+    }
+  }
+  .Main {
+    text-align: center;
+    .Item {
+      img {
+        object-fit: none;
+      }
+      .Bar {
+        height: 8rem;
+        background: #ffffff;
+      }
+    }
+  }
+}
