@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { Route, Link } from "react-router-dom";
 import "./HeaderTemplate.scss";
 import { ReactComponent as NotiIcon } from "../asset/icon/notification.svg";
 import { ReactComponent as LoginIcon } from "../asset/icon/login.svg";
@@ -11,11 +11,21 @@ const Header = () => {
       <div className="Top">
         <div className="Item">
           <NotiIcon />
-          알림
+          <Link
+            to="/notification"
+            style={{ textDecoration: "none", color: "#ffffff" }}
+          >
+            알림
+          </Link>
         </div>
         <div className="Item">
           <LoginIcon />
-          로그인
+          <Link
+            to="/login"
+            style={{ textDecoration: "none", color: "#ffffff" }}
+          >
+            로그인
+          </Link>
         </div>
       </div>
       <div className="Title">CLORIT</div>
