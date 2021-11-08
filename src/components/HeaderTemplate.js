@@ -16,6 +16,12 @@ const Header = () => {
     justifyContent: 'center',
     alignItems: 'center',
   };
+  const menuLinkStyle = {
+    textDecoration: 'none',
+    color: '#000000',
+    justifyContent: 'center',
+    alignItems: 'center',
+  };
 
   return (
     <div className='HeaderTemplate'>
@@ -62,6 +68,30 @@ const Header = () => {
           </Link>
         </div>
         <div className='Item'>마이</div>
+      </div>
+      <div className='BottomMenuLayout'>
+        <div className='BottomMenu'>
+          <div className='Item'>
+            <Link to='/' style={menuLinkStyle}>
+              홈
+            </Link>
+          </div>
+          <div className='Item'>
+            <Link to='/artists' style={menuLinkStyle}>
+              전체 아티스트
+            </Link>
+          </div>
+          <div className='Item'>
+            <Link to='/' style={menuLinkStyle}>
+              추천 코디
+            </Link>
+          </div>
+          <div className='Item'>
+            <Link to='/' style={menuLinkStyle}>
+              이벤트
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

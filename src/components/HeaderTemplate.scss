@@ -1,6 +1,6 @@
 .HeaderTemplate {
   background: #000000;
-  height: 12rem;
+  //height: 15rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,7 +42,7 @@
     }
   }
   .Bottom {
-    margin-top: auto;
+    margin-top: 30px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -52,6 +52,22 @@
       margin-left: 3rem;
       margin-right: 3rem;
       color: #ffffff;
+    }
+  }
+  .BottomMenuLayout {
+    width: 100%;
+    background: #ffffff;
+    .BottomMenu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      .Item {
+        font-family: NanumBarunGothic;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        color: #ffffff;
+      }
     }
   }
 }
