@@ -12,13 +12,11 @@ const OnClickNotification = () => {
 const Header = () => {
   const standardLinkStyle = {
     textDecoration: 'none',
-    color: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
   };
   const menuLinkStyle = {
     textDecoration: 'none',
-    color: '#000000',
     justifyContent: 'center',
     alignItems: 'center',
   };

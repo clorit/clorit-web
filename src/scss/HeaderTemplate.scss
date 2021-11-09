@@ -52,6 +52,10 @@
       margin-left: 3rem;
       margin-right: 3rem;
       color: #ffffff;
+      &:hover {
+        color: #E05344;
+      }
+
     }
   }
   .BottomMenuLayout {
@@ -66,7 +70,10 @@
         font-family: NanumBarunGothic;
         margin-left: 3rem;
         margin-right: 3rem;
-        color: #ffffff;
+        color: #000000;
+        &:hover {
+          color: #E05344;
+        }
       }
     }
   }
