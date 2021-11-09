@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Instagram from '../asset/icon/instagram.svg';
 import Mail from '../asset/icon/mail.svg';
 import Guide from '../asset/icon/guide.svg';
-import './Footer.scss';
+import '../scss/Footer.scss';
 
 const Footer = () => {
   return (

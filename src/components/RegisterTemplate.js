@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import './RegisterTemplate.scss';
+import '../scss/RegisterTemplate.scss';
 
 const RegisterTemplate = () => {
   return (

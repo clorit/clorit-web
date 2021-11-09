@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainLayout_Upload.scss';
+import '../scss/MainLayout_Upload.scss';
 
 const MainLayout_Upload = () => {
   return (

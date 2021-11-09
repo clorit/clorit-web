@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainLayout_Home.scss';
+import '../scss/MainLayout_Home.scss';
 import jimin from '../asset/image/jimin.png';
 import iu from '../asset/image/iu.png';
 

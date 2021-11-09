@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainLayout_Artists.scss';
+import '../scss/MainLayout_Artists.scss';
 
 const MainLayout_Artists = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import './HeaderTemplate.scss';
+import '../scss/HeaderTemplate.scss';
 import HeaderTemplate from './HeaderTemplate';
 import Footer from './Footer';
 import MainLayout_Ranking from './MainLayout_Ranking';

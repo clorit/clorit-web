@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainLayout_Ranking.scss';
+import '../scss/MainLayout_Ranking.scss';
 
 const MainLayout_Ranking = () => {
   return (

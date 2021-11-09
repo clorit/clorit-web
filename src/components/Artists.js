@@ -1,5 +1,5 @@
 import React from 'react';
-import './HeaderTemplate.scss';
+import '../scss/HeaderTemplate.scss';
 import HeaderTemplate from './HeaderTemplate';
 import Footer from './Footer';
 import MainLayout_Artists from './MainLayout_Artists';

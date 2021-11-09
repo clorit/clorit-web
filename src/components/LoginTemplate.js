@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import './LoginTemplate.scss';
+import '../scss/LoginTemplate.scss';
 
 const LoginTemplate = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
-import './HeaderTemplate.scss';
+import '../scss/HeaderTemplate.scss';
 import { ReactComponent as NotiIcon } from '../asset/icon/notification.svg';
 import { ReactComponent as LoginIcon } from '../asset/icon/login.svg';
 import { ReactComponent as SearchIcon } from '../asset/icon/search.svg';
@@ -39,7 +39,9 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='Title'>CLORIT</div>
+      <div className='Title'>
+        <Link to='/'>CLORIT</Link>
+      </div>
       <div className='Search'>
         <input />
         <button type='submit'>
