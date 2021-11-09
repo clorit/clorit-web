@@ -55,7 +55,7 @@ const Header = () => {
           </Link>
         </div>
         <div className='Item'>
-          <Link to='/' style={standardLinkStyle}>
+          <Link to='/search' style={standardLinkStyle}>
             상세 검색
           </Link>
         </div>

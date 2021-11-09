@@ -7,6 +7,7 @@ import Ranking from './components/Ranking';
 import Upload from './components/Upload';
 import Register from './components/RegisterTemplate';
 import Artists from './components/Artists';
+import DetailedSearch from './components/DetailedSearch';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/upload' component={Upload} />
       <Route path='/register' component={Register} />
       <Route path='/artists' component={Artists} />
+      <Route path='/search' component={DetailedSearch} />
     </div>
   );
 }
