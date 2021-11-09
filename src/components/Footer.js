@@ -13,12 +13,16 @@ const Footer = () => {
       </div>
       <div className='icon-group'>
         <figure>
-          <img src={Instagram}></img>
-          <figcaption>인스타그램</figcaption>
+          <a href='https://instagram.com/clorit2021?utm_medium=copy_link'>
+            <img src={Instagram}></img>
+            <figcaption>인스타그램</figcaption>
+          </a>
         </figure>
         <figure>
-          <img src={Mail}></img>
-          <figcaption>뉴스레터 구독</figcaption>
+          <a href='https://page.stibee.com/subscriptions/140470'>
+            <img src={Mail}></img>
+            <figcaption>뉴스레터 구독</figcaption>
+          </a>
         </figure>
         <figure>
           <img src={Guide}></img>
