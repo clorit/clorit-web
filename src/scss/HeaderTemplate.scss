@@ -17,7 +17,7 @@
   }
 
   .Title {
-    font-family: HSBomBaram 2;
+    font-family: Roboto 2;
     font-size: 48px;
     line-height: 48px;
     padding-bottom: 10px;
@@ -48,7 +48,7 @@
     justify-content: space-between;
     align-items: center;
     .Item {
-      font-family: NanumBarunGothic;
+      font-family: Roboto;
       margin-left: 3rem;
       margin-right: 3rem;
       color: #ffffff;
@@ -67,9 +67,9 @@
       align-items: center;
       flex-direction: row;
       .Item {
-        font-family: NanumBarunGothic;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        font-family: Roboto;
+        margin-left: 2rem;
+        margin-right: 2rem;
         color: #000000;
         &:hover {
           color: #E05344;

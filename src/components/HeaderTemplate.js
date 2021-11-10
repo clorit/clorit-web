@@ -1,13 +1,60 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Route, Link } from 'react-router-dom';
 import '../scss/HeaderTemplate.scss';
 import { ReactComponent as NotiIcon } from '../asset/icon/notification.svg';
 import { ReactComponent as LoginIcon } from '../asset/icon/login.svg';
 import { ReactComponent as SearchIcon } from '../asset/icon/search.svg';
 
+
 const OnClickNotification = () => {
   alert('A');
 };
+
+const nav_category = 
+  {
+    '홈': {
+      id:'home',
+      value: '홈',
+      children: [
+        {id: 'child_home', value: '홈'},
+        {id: 'artists', value: '전체 아티스트'},
+        {id: 'codi', value: '추천 코디'},
+        {id: 'event', value: '이벤트'},
+      ]  
+    },
+    '상세 검색': {
+      id: 'detailed_search', 
+      value: '상세 검색',
+      children: [
+        {id: 'child_search', value: '상세 검색'},
+      ]
+    },
+    '랭킹': {
+      id: 'ranking',
+      value: '랭킹',
+      children: [
+        {id: 'child_ranking', value: '랭킹'}
+      ]
+    },
+    '업로드': {
+      id: 'upload',
+      value: '업로드',
+      children: [
+        {id: 'child_upload', value: '업로드'},
+        {id: 'upload_check', value: '업로드 확인'},
+      ]
+    },
+    '마이': {
+      id: 'my',
+      value: '마이',
+      children: [
+        {id: 'my_page', value: '마이 페이지'}
+      ]
+    }
+    
+  }
+
+
 
 const Header = () => {
   const standardLinkStyle = {
@@ -20,6 +67,14 @@ const Header = () => {
     justifyContent: 'center',
     alignItems: 'center',
   };
+
+  const [tabMenu, setTabMenu] = useState(nav_category['홈']);
+
+  const onMouseOver = useCallback(e => {
+    console.log(tabMenu)
+    console.log(e)
+    setTabMenu(nav_category[e.target.text])
+  })
 
   return (
     <div className='HeaderTemplate'>
@@ -47,31 +102,42 @@ const Header = () => {
         </button>
       </div>
       <div className='Bottom'>
-        <div className='Item'>
+        <div className='Item' onMouseOver={onMouseOver}>
           <Link to='/' style={standardLinkStyle}>
             홈
           </Link>
         </div>
-        <div className='Item'>
+        <div className='Item' onMouseOver={onMouseOver}>
           <Link to='/search' style={standardLinkStyle}>
             상세 검색
           </Link>
         </div>
-        <div className='Item'>
+        <div className='Item' onMouseOver={onMouseOver}>
           <Link to='/ranking' style={standardLinkStyle}>
             랭킹
           </Link>
         </div>
-        <div className='Item'>
+        <div className='Item' onMouseOver={onMouseOver}>
           <Link to='/upload' style={standardLinkStyle}>
             업로드
           </Link>
         </div>
-        <div className='Item'>마이</div>
+        <div className='Item' onMouseOver={onMouseOver}>
+          <Link to='/' style={standardLinkStyle}>
+            마이
+          </Link>
+        </div>
       </div>
       <div className='BottomMenuLayout'>
         <div className='BottomMenu'>
-          <div className='Item'>
+          {tabMenu.children.map(subCategory => (
+            <div className='Item'>
+              <Link to='/' style={standardLinkStyle} className={subCategory.id}>
+                {subCategory.value}
+              </Link>
+            </div>
+          ))}
+          {/* <div className='Item'>
             <Link to='/' style={menuLinkStyle}>
               홈
             </Link>
@@ -90,7 +156,7 @@ const Header = () => {
             <Link to='/' style={menuLinkStyle}>
               이벤트
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
