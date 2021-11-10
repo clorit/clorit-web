@@ -71,8 +71,6 @@ const Header = () => {
   const [tabMenu, setTabMenu] = useState(nav_category['홈']);
 
   const onMouseOver = useCallback(e => {
-    console.log(tabMenu)
-    console.log(e)
     setTabMenu(nav_category[e.target.text])
   })
 
