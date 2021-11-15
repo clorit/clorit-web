@@ -5,56 +5,45 @@ import { ReactComponent as NotiIcon } from '../asset/icon/notification.svg';
 import { ReactComponent as LoginIcon } from '../asset/icon/login.svg';
 import { ReactComponent as SearchIcon } from '../asset/icon/search.svg';
 
-
 const OnClickNotification = () => {
   alert('A');
 };
 
-const nav_category = 
-  {
-    '홈': {
-      id:'home',
-      value: '홈',
-      children: [
-        {id: 'child_home', value: '홈'},
-        {id: 'artists', value: '전체 아티스트'},
-        {id: 'codi', value: '추천 코디'},
-        {id: 'event', value: '이벤트'},
-      ]  
-    },
-    '상세 검색': {
-      id: 'detailed_search', 
-      value: '상세 검색',
-      children: [
-        {id: 'child_search', value: '상세 검색'},
-      ]
-    },
-    '랭킹': {
-      id: 'ranking',
-      value: '랭킹',
-      children: [
-        {id: 'child_ranking', value: '랭킹'}
-      ]
-    },
-    '업로드': {
-      id: 'upload',
-      value: '업로드',
-      children: [
-        {id: 'child_upload', value: '업로드'},
-        {id: 'upload_check', value: '업로드 확인'},
-      ]
-    },
-    '마이': {
-      id: 'my',
-      value: '마이',
-      children: [
-        {id: 'my_page', value: '마이 페이지'}
-      ]
-    }
-    
-  }
-
-
+const nav_category = {
+  홈: {
+    id: 'home',
+    value: '홈',
+    children: [
+      { id: 'child_home', value: '홈', to: '/' },
+      { id: 'artists', value: '전체 아티스트', to: '/artists' },
+      { id: 'codi', value: '추천 코디' },
+      { id: 'event', value: '이벤트' },
+    ],
+  },
+  '상세 검색': {
+    id: 'detailed_search',
+    value: '상세 검색',
+    children: [{ id: 'child_search', value: '상세 검색', to: '/search' }],
+  },
+  랭킹: {
+    id: 'ranking',
+    value: '랭킹',
+    children: [{ id: 'child_ranking', value: '랭킹', to: '/ranking' }],
+  },
+  업로드: {
+    id: 'upload',
+    value: '업로드',
+    children: [
+      { id: 'child_upload', value: '업로드', to: '/upload' },
+      { id: 'upload_check', value: '업로드 확인' },
+    ],
+  },
+  마이: {
+    id: 'my',
+    value: '마이',
+    children: [{ id: 'my_page', value: '마이 페이지' }],
+  },
+};
 
 const Header = () => {
   const standardLinkStyle = {
@@ -70,9 +59,9 @@ const Header = () => {
 
   const [tabMenu, setTabMenu] = useState(nav_category['홈']);
 
-  const onMouseOver = useCallback(e => {
-    setTabMenu(nav_category[e.target.text])
-  })
+  const onMouseOver = useCallback((e) => {
+    setTabMenu(nav_category[e.target.text]);
+  });
 
   return (
     <div className='HeaderTemplate'>
@@ -128,33 +117,17 @@ const Header = () => {
       </div>
       <div className='BottomMenuLayout'>
         <div className='BottomMenu'>
-          {tabMenu.children.map(subCategory => (
+          {tabMenu.children.map((subCategory) => (
             <div className='Item'>
-              <Link to='/' style={standardLinkStyle} className={subCategory.id}>
+              <Link
+                to={subCategory.to}
+                style={standardLinkStyle}
+                className={subCategory.id}
+              >
                 {subCategory.value}
               </Link>
             </div>
           ))}
-          {/* <div className='Item'>
-            <Link to='/' style={menuLinkStyle}>
-              홈
-            </Link>
-          </div>
-          <div className='Item'>
-            <Link to='/artists' style={menuLinkStyle}>
-              전체 아티스트
-            </Link>
-          </div>
-          <div className='Item'>
-            <Link to='/' style={menuLinkStyle}>
-              추천 코디
-            </Link>
-          </div>
-          <div className='Item'>
-            <Link to='/' style={menuLinkStyle}>
-              이벤트
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>
