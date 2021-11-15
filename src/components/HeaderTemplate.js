@@ -120,7 +120,7 @@ const Header = () => {
           {tabMenu.children.map((subCategory) => (
             <div className='Item'>
               <Link
-                to={subCategory.to}
+                to={subCategory.to == undefined ? '/' : subCategory.to}
                 style={standardLinkStyle}
                 className={subCategory.id}
               >
