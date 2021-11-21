@@ -10,6 +10,23 @@
       .Bar {
         height: 8rem;
         background: #626060;
+        .Box {
+          float:left;
+          border: 1px solid white;
+          border-radius: 30px;
+          width: 400px;
+          .cap{
+            width: 90px;
+            height : 8rem;
+            img{
+              object-fit: cover;
+              float:left;
+            }
+          }
+          .text{
+            float:left;
+          }
+        }
       }
     }
   }

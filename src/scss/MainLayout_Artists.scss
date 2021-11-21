@@ -1,4 +1,51 @@
 .MainLayout_Artists {
   min-height: 1080px;
   background: black;
+
+  .Top{
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width : 277px;
+      height : 56px;
+      margin-top: 1rem;
+      color: #ffffff;
+      margin: 0 auto;
+      font-size: 25px;
+    }
+  }
+  .block{
+    width: 330px;
+    height: 48px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .box{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .textBox{
+    margin-top: 20px;
+    p{
+      color: #ffffff;
+      font-size: 18px;
+      margin: 0 auto;
+    }
+  }
+  .redBox{
+    background-color: #E05344;
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width : 49px;
+      height : 28px;
+      margin-top: 1rem;
+      color: #ffffff;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+  }
 }
