@@ -12,7 +12,7 @@ const MainLayout_Home = () => {
       <div className='MainLayout'>
         <div className='Main'>
           <div className='Item'>
-            <img src={jimin} />
+            <img src={jimin} className='center_img' />
             <div className='Bar'>
               <div className="arrow left"/>
               <div className='Box'>
@@ -52,7 +52,7 @@ const MainLayout_Home = () => {
             </div>
           </div>
           <div className='Item'>
-            <img src={iu} />
+            <img src={iu} className='center_img' />
             <div className='Bar'>
               <div className="arrow left"/>
               <div className='Box'>
