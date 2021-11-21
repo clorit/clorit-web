@@ -16,7 +16,7 @@ const nav_category = {
     children: [
       { id: 'child_home', value: '홈', to: '/' },
       { id: 'artists', value: '전체 아티스트', to: '/artists' },
-      { id: 'codi', value: '추천 코디' },
+      { id: 'codi', value: '추천 코디', to: '/codi' },
       { id: 'event', value: '이벤트' },
     ],
   },

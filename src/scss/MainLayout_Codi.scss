@@ -1,0 +1,37 @@
+.MainLayout_Codi{
+  padding-top: 10px;
+  background-color: black;
+  .Bar{
+    padding-top: 30px;
+    text-align: center;
+    .Box{
+      display : inline-block;
+      margin-left: 25px;
+      .Cap{
+        .image{
+          width: 500px;
+          height: 500px;
+        }
+      }
+      .text{
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 5px;
+        .t1{
+          margin: 0px;
+          color : black;
+          text-align: left;
+          margin-left: 10px;
+          font-size: 20px;
+        }
+        .t2{
+          margin: 0px;
+          color : #7c7c7c;
+          text-align: left;
+          margin-left: 10px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
