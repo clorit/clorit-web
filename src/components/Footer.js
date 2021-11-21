@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className='Footer'>
       <div className='Title'>
-        최애 손민수템 검색은 <span style={{ color: 'orange' }}>클로릿!</span>
+        최애 손민수템 검색은 <span className='Clorit'>클로릿</span>!
       </div>
       <div className='icon-group'>
         <figure>
