@@ -8,23 +8,74 @@
         object-fit: none;
       }
       .Bar {
-        height: 8rem;
-        background: #626060;
+        height: 190px;
+        background: black;
+        text-align: center;
+        .arrow {
+          margin-bottom: 53px;
+          display: inline-block;
+          width: 3vmin;
+          height: 3vmin;
+          background: transparent;
+          border-top: 1vmin solid white;
+          border-right: 1vmin solid white;
+          box-shadow: 0 0 0 lightgray;
+          transition: all 200ms ease;
+          
+          &.left {
+            left: 0;
+            transform: translate3d(0,-50%,0) rotate(-135deg);
+          }
+        
+          &.right {
+            margin-left : 20px;
+            right: 0;
+            transform: translate3d(0,-50%,0) rotate(45deg);
+          }
+          
+          &:hover {
+            border-color: orange;
+            box-shadow: 0.5vmin -0.5vmin 0 white;
+          }
+          
+          &:before { // for better hit area
+            content: '';
+            left: 50%;
+            transform: translate(-40%,-60%) rotate(45deg);
+            width: 200%;
+            height: 200%;
+          }
+        }
         .Box {
-          float:left;
+          display: inline-block;
           border: 1px solid white;
           border-radius: 30px;
           width: 400px;
+          height: 185px;
+          margin-left: 20px;
           .cap{
-            width: 90px;
-            height : 8rem;
-            img{
-              object-fit: cover;
-              float:left;
+            width: 180px;
+            height: 181px;
+            float: left;
+            .image{
+              margin: 13px;
+              width:90%;
+              height:90%;
             }
           }
           .text{
-            float:left;
+            float: left;
+            .title{
+              color: #ffffff;
+              font-size: 20px;
+              text-align: left;
+              margin-left: 10px;
+            }
+            .subtitle{
+              color: #C4C4C4;
+              text-align: left;
+              margin-left: 10px;
+            }
           }
         }
       }
