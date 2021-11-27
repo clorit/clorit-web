@@ -9,6 +9,8 @@ import Register from './components/RegisterTemplate';
 import Artists from './components/Artists';
 import DetailedSearch from './components/DetailedSearch';
 import Codi from './components/Codi';
+import Jimin from './components/Jimin';
+import DetailedJimin from './components/DetailedJimin';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Route path='/artists' component={Artists} />
       <Route path='/codi' component={Codi} />
       <Route path='/search' component={DetailedSearch} />
+      <Route path='/jimin' component={Jimin} />
+      <Route path='/detailed_jimin' component={DetailedJimin} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../scss/MainLayout_Artists.scss';
+import { Router,Link} from 'react-router-dom';
 
 const MainLayout_Artists = () => {
   return (
@@ -56,7 +57,9 @@ const MainLayout_Artists = () => {
               <p>레드벨벳</p>
               <p>마마무</p>
               <p>몬스타엑스</p>
-              <p>방탄소년단</p>
+              <Link to='/jimin' className = 'text'>
+              방탄소년단
+              </Link>
               <p>보이프렌드</p>
               <p>비투비</p>
               <p>빅뱅</p>

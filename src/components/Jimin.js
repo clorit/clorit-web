@@ -1,22 +1,20 @@
 import React from 'react';
 import HeaderTemplate from './HeaderTemplate';
 import Footer from './Footer';
-import MainLayout_Search from './MainLayout_Search';
+import MainLayout_Jimin from './MainLayout_Jimin.js';
 
 
 
-const DetailedSearch = () => {
-
-
+const Jimin = () => {
 
     return (
         <div className="Search">
             <HeaderTemplate></HeaderTemplate>
-            <MainLayout_Search></MainLayout_Search>
+            <MainLayout_Jimin></MainLayout_Jimin>
             <Footer></Footer>
         </div>
     );
 
 }
 
-export default DetailedSearch;
+export default Jimin;
