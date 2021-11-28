@@ -19,6 +19,10 @@ const darkTheme = createTheme({
 });
 
 const MainLayout_Upload = () => {
+  const onClick = () => {
+    alert('업로드 되었습니다.');
+    window.location.href = '/';
+  };
   const days = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
     22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
@@ -333,7 +337,12 @@ const MainLayout_Upload = () => {
         <div className='container'>
           <Grid container spacing={6}>
             <Grid className='date' item>
-              <Button variant='contained' color='error' size='large'>
+              <Button
+                variant='contained'
+                color='error'
+                size='large'
+                onClick={onClick}
+              >
                 업로드
               </Button>
             </Grid>
