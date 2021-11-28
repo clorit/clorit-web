@@ -57,7 +57,7 @@ const MainLayout_Artists = () => {
               <p>레드벨벳</p>
               <p>마마무</p>
               <p>몬스타엑스</p>
-              <Link to='/jimin' className = 'text'>
+              <Link to='/bts' className = 'text'>
               방탄소년단
               </Link>
               <p>보이프렌드</p>
