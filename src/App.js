@@ -11,6 +11,7 @@ import DetailedSearch from './components/DetailedSearch';
 import Codi from './components/Codi';
 import Jimin from './components/Jimin';
 import DetailedJimin from './components/DetailedJimin';
+import Bts from './components/Bts';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path='/search' component={DetailedSearch} />
       <Route path='/jimin' component={Jimin} />
       <Route path='/detailed_jimin' component={DetailedJimin} />
+      <Route path='/bts' component={Bts} />
     </div>
   );
 }
