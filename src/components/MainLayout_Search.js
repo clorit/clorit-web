@@ -7,6 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import { Input } from '@mui/material';
+import pop from '../asset/image/pop.PNG';
 
 const darkTheme = createTheme({
     palette: {
@@ -60,6 +61,7 @@ const MainLayout_Search = () => {
                         </Grid>
                         <Grid item>
                             <FormControl style={{ minWidth:250 }}>
+                            <InputLabel>Color</InputLabel>
                                 <Select
                                     label='Color'
                                 >
@@ -136,22 +138,8 @@ const MainLayout_Search = () => {
                         <p className = 't2'>놀면뭐하니</p>
                     </div>
                 </div>
-            </div>
-            <div className='box1'>
-                <div>
-                    <p className = 't1'>실시간 인기 검색어</p>
-                    <hr size='2' width='1400px' color='#626060'/>
-                    <div className='pBox'>
-                        <div className = 'pBox1'>
-                            <p className = 't3'>1</p>
-                        </div>
-                        <div className = 'pBox2'>
-                            <p className = 't4'>210428 팬미팅 지민</p>
-                        </div>
-                    </div>
-                    <hr size='2' width='1400px' color='#626060'/>
-                </div>   
-            </div>       
+            </div>  
+            <img src={pop} className='img'  />  
         </div>
     </ThemeProvider>
   );
