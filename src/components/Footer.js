@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div className='icon-group'>
         <figure>
-          <a href='https://instagram.com/clorit2021?utm_medium=copy_link'>
+          <a href='https://www.instagram.com/clorit_public/?hl=ko'>
             <img src={Instagram}></img>
             <figcaption>인스타그램</figcaption>
           </a>
