@@ -16,8 +16,8 @@ import DetailedJimin from './components/DetailedJimin';
 function App() {
   return (
     <div>
-      <Route path='/home' component={FakeHome} exact />
-      <Route path='/' component={Home} />
+      <Route path='/home' component={FakeHome}  />
+      <Route path='/' component={Home}exact />
       <Route path='/login' component={Login} />
       <Route path='/ranking' component={Ranking} />
       <Route path='/upload' component={Upload} />

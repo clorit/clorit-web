@@ -59,7 +59,7 @@ const FakeHeader = () => {
   });
 
   return (
-    <div className='FakeHeaderTemplate'>
+    <div className='HeaderTemplate'>
       <div className='Top'>
         <div className='Item'>
           <NotiIcon />

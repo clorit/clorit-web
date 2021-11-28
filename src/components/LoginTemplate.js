@@ -112,9 +112,9 @@ function LoginTemplate(props){
                   }
                 />
                  </Form.Item>
-        <Form.Item>
-        <button onclick="window.location.href='/'">Log in</button>
-          </Form.Item>
+        <Link to='/'>
+        <button>Log in</button>
+        </Link>
         <div className='Bottom'>
           <div className='Item'>자동로그인</div>
           <div className='Item'>아이디 찾기</div>
