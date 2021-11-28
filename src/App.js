@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
+import FakeHome from './components/FakeHome';
 import Login from './components/LoginTemplate';
 import { Route } from 'react-router-dom';
 import Ranking from './components/Ranking';
@@ -15,7 +16,8 @@ import DetailedJimin from './components/DetailedJimin';
 function App() {
   return (
     <div>
-      <Route path='/' component={Home} exact />
+      <Route path='/home' component={FakeHome} exact />
+      <Route path='/' component={Home} />
       <Route path='/login' component={Login} />
       <Route path='/ranking' component={Ranking} />
       <Route path='/upload' component={Upload} />

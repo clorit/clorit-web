@@ -45,13 +45,8 @@ const nav_category = {
   },
 };
 
-const Header = () => {
+const FakeHeader = () => {
   const standardLinkStyle = {
-    textDecoration: 'none',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
-  const menuLinkStyle = {
     textDecoration: 'none',
     justifyContent: 'center',
     alignItems: 'center',
@@ -64,7 +59,7 @@ const Header = () => {
   });
 
   return (
-    <div className='HeaderTemplate'>
+    <div className='FakeHeaderTemplate'>
       <div className='Top'>
         <div className='Item'>
           <NotiIcon />
@@ -75,7 +70,7 @@ const Header = () => {
         <div className='Item'>
           <LoginIcon />
           <Link to='/login' style={standardLinkStyle}>
-            내 정보
+            로그인
           </Link>
         </div>
       </div>
@@ -116,11 +111,12 @@ const Header = () => {
         </div>
       </div>
       <div className='BottomMenuLayout'>
+
         <div className='BottomMenu'>
           {tabMenu.children.map((subCategory) => (
             <div className='Item'>
               <Link
-                to={subCategory.to == undefined ? '/' : subCategory.to}
+                to={subCategory.to === undefined ? '/' : subCategory.to}
                 style={standardLinkStyle}
                 className={subCategory.id}
               >
@@ -134,4 +130,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default FakeHeader;
