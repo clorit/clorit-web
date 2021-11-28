@@ -1,4 +1,92 @@
 .MainLayout_Upload {
-  background: black;
   min-height: 1080px;
+  background: black;
+  color:white;
+  display:block;
+.bigContainer{
+  display: block;
+  margin-bottom: 20px;
+  .container{
+    margin-top: 20px;
+  }
+}
+  padding-top: 1rem;
+.date {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 20px;
+  text-align: center;
+}
+.date_c{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 60px;
+  text-align: center;
+}
+.event_kind{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 60px;
+  text-align: center;
+}
+.box1{
+  display:block;
+  .pBox{
+    display: flex;
+    height: 50px;
+    .pBox1{
+      margin-left: 100px;
+    }
+    .pBox2{
+      margin-bottom: 10px;
+      margin-left: 50px;
+    }
+  }
+  .t3{
+    font-size: 20px;
+    color: #E05344;
+  }
+  .t4{
+    font-size: 20px;
+    color: white;
+  }
+  .t1{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 20px;
+    color: white;
+  }
+  .bar1{
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    .innerbox{
+      font-size: 20px;
+      text-align: center;
+      width: 20%;
+      border-radius: 10px;
+      background-color: #626060;
+      border : 1px solid #626060;
+      margin-right: 10px;
+    }
+    .innerbox_2{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 20px;
+      text-align: center;
+      width: 12%;
+      border-radius: 10px;
+      background-color: #E05344;
+      border : 1px solid black;
+      margin-right: 10px;
+      .t2{
+        margin: 0px;
+      }
+    }
+  }
+}
 }

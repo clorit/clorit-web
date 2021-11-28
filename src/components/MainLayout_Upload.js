@@ -6,6 +6,11 @@ import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import { useState } from 'react';
 import iu from '../asset/image/iu.png';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import Grid from '@mui/material/Grid';
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
 const darkTheme = createTheme({
   palette: {
@@ -16,36 +21,224 @@ const darkTheme = createTheme({
 
 
 const MainLayout_Upload = () => {
-
-  const [imgBase64, setImgBase64] = useState(""); // 파일 base64
-  const [imgFile, setImgFile] = useState(null);	//파일	
-  
-  const handleChangeFile = (event) => {
-    let reader = new FileReader();
-
-    reader.onloadend = () => {
-      // 2. 읽기가 완료되면 아래코드가 실행됩니다.
-      const base64 = reader.result;
-      if (base64) {
-        setImgBase64(base64.toString()); // 파일 base64 상태 업데이트
-      }
-    }
-    if (event.target.files[0]) {
-      reader.readAsDataURL(event.target.files[0]); // 1. 파일을 읽어 버퍼에 저장합니다.
-      setImgFile(event.target.files[0]); // 파일 상태 업데이트
-    }
-  }
-
   return (
     <ThemeProvider theme={darkTheme}>
-        <div className='MainLayout_Upload'>
-          <br />
-        <Input type="file" name="imgFile" id="imgFile" onChange={handleChangeFile}/>
-        <IconButton variant='outlined' endIcon={<AddAPhotoIcon/>}></IconButton>
+        <div className='MainLayout_Search'>
+            <div className = 'bigContainer'>
+              <div className = 'container'>
+                <Grid container spacing={1}>
+                  <Grid className ='date' item>
+                      아티스트
+                  </Grid>
+                  <Grid item>
+                      <FormControl style={{ minWidth:120 }}>
+                          <InputLabel>그룹</InputLabel>
+                          <Select
+                              label='Year'
+                          >
+                          </Select>
+                      </FormControl>
+                  </Grid>
+                  <Grid item>
+                      <FormControl style={{ minWidth:120 }}>
+                          <InputLabel>멤버</InputLabel>
+                          <Select
+                              label='Month'    
+                          >
+                          </Select>
+                      </FormControl>
+                  </Grid>
+                </Grid>
+              </div>
+                <div className = 'container'>
+                  <Grid container spacing={1}>
+                    <Grid className ='date' item>
+                        행사날짜
+                    </Grid>
+                    <Grid item>
+                        <FormControl style={{ minWidth:120 }}>
+                            <InputLabel>연</InputLabel>
+                            <Select
+                                label='Year'
+                            >
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid item>
+                        <FormControl style={{ minWidth:120 }}>
+                            <InputLabel>월</InputLabel>
+                            <Select
+                                label='Month'    
+                            >
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid item>
+                        <FormControl style={{ minWidth:120 }}>
+                        <InputLabel>일</InputLabel>
+                            <Select
+                                label='Day'    
+                            >
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                  </Grid>
+                </div>
+                
+                <div className = 'container'>
+                    <Grid container spacing={1}>
+                        <Grid className ='date' item>
+                            행사종류
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:250 }}>
+                              <InputLabel>행사종류</InputLabel>
+                                <Select
+                                    label='Color'
+                                >
+                                </Select>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
+                </div>
+                <div className = 'container'>
+                    <Grid container spacing={4}>
+                        <Grid className ='date' item>
+                            행사명
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:250 }}>
+                              <InputLabel>행사명</InputLabel>
+                                <Input
+                                    label='Color'
+                                >
+                                </Input>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
+                </div>
+            </div>
+            <hr size='2' width='1400px' color='#626060'/>
+
+
+            <div className = 'bigContainer'>
+              <div className = 'container'>
+                <Grid container spacing={4}>
+                  <Grid className ='date' item>
+                      제품명
+                  </Grid>
+                  <Grid item>
+                      <FormControl style={{ minWidth:250 }}>
+                          <InputLabel>제품명</InputLabel>
+                          <Input
+                              label='Year'
+                          >
+                          </Input>
+                      </FormControl>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className = 'container'>
+                <Grid container spacing={1}>
+                  <Grid className ='date' item>
+                      카테고리
+                  </Grid>
+                  <Grid item>
+                      <FormControl style={{ minWidth:120 }}>
+                          <InputLabel></InputLabel>
+                          <Select
+                              label='Year'
+                          >
+                          </Select>
+                      </FormControl>
+                  </Grid>
+                  <Grid item>
+                      <FormControl style={{ minWidth:120 }}>
+                          <InputLabel></InputLabel>
+                          <Select
+                              label='Month'    
+                          >
+                          </Select>
+                      </FormControl>
+                  </Grid>
+                </Grid>
+              </div>    
+              <div className = 'container'>
+                    <Grid container spacing={6}>
+                        <Grid className ='date' item>
+                            색상
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:250 }}>
+                              <InputLabel>색상</InputLabel>
+                                <Input
+                                    label='Color'
+                                >
+                                </Input>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
+              </div> 
+              <div className = 'container'>
+                    <Grid container spacing={1}>
+                        <Grid className ='date' item>
+                            브랜드명
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:250 }}>
+                              <InputLabel>브랜드명</InputLabel>
+                                <Input
+                                    label='Color'
+                                >
+                                </Input>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
+              </div>
+              <div className = 'container'>
+                    <Grid container spacing={6}>
+                        <Grid className ='date' item>
+                            가격
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:250 }}>
+                              <InputLabel>가격</InputLabel>
+                                <Input
+                                    label='Color'
+                                >
+                                </Input>
+                                
+                            </FormControl>
+                            <Select label='kind'>
+                              {/* <InputLabel>단위</InputLabel> */}
+                              <MenuItem>$</MenuItem>
+                              <MenuItem>KRW</MenuItem>
+                            </Select>
+                        </Grid>
+                    </Grid>
+              </div>
+              <div className = 'container'>
+                    <Grid container spacing={6}>
+                        <Grid className ='date' item>
+                            태그
+                        </Grid>
+                        <Grid item>
+                            <FormControl style={{ minWidth:1000 }}>
+                              <InputLabel>태그</InputLabel>
+                                <Input
+                                    label='Color'
+                                >
+                                </Input>
+                            </FormControl>
+                        </Grid>
+                    </Grid>
+              </div>
+            </div>
+                  
+
 
         </div>
     </ThemeProvider>
-    
   );
 };
 
